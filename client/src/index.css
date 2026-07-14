@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+@media print {
+  body { 
+    background: white !important; 
+  }
+  .glass { 
+    border: none !important; 
+    box-shadow: none !important; 
+    background: white !important; 
+  }
+  button, .print\:hidden, nav, header { 
+    display: none !important; 
+  }
+}
+
